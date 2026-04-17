@@ -1,0 +1,218 @@
+.reference {
+	//padding-top: 8rem;
+
+	.reference__content {
+		.container {
+			.inner {
+				display: flex;
+				gap: min(max(4rem, 6vw), 12.6rem);
+				margin-bottom: min(max(6rem, 3vw), 23rem);
+
+				@include query-to(700) {
+					flex-direction: column-reverse;
+				}
+
+				.inner__left {
+					width: 70%;
+					//padding-top: min(max(1px, 3vw), 6rem);
+					color: #727272;
+
+					@include query-to(900) {
+						width: 80%;
+					}
+					@include query-to(700) {
+						width: 100%;
+					}
+
+					ul, ol {
+						padding-left: 2rem;
+						margin-bottom: 2rem;
+					}
+
+					h1, h2, h3, h4 {
+						color: $brown;
+						font-weight: $heading-font-weight;
+						line-height: $heading-line-height;
+	    				letter-spacing: $heading-letter-spacing;
+					}
+					.wp-block-video,
+					.wp-block-image {
+						margin: 5rem 0;
+					}
+
+					h2 {
+						font-size: min(max(2.2rem, 4vw), 2.6rem);
+						margin-bottom: 3rem;
+					}
+					h3 {
+						font-size: min(max(2rem, 4vw), 2rem);
+						margin-bottom: 3rem;
+					}
+					h4 {
+						font-size: 1.8rem;
+						margin-bottom: 2rem;
+					}
+					& > :last-child {
+						margin-bottom: 0;
+					}
+				}
+				.inner__right {
+					width: 30%;
+					position: relative;
+					text-transform: uppercase;
+
+					@include query-to(900) {
+						width: 20%;
+					}
+					@include query-to(700) {
+						width: 100%;
+					}
+
+					.sticky {
+						@include transition();
+	        			@include transition-property((top));
+						position: sticky;
+						top: 9rem;
+						display: flex;
+						flex-wrap: wrap;
+						gap: $menu-gap;
+						row-gap: 2rem;
+
+						@include query-to(900) {
+							flex-direction: column;
+							row-gap: 1rem;
+						}
+						@include query-to(700) {
+							flex-direction: row;
+						}
+					}
+
+					.share-button {
+						cursor: pointer;
+
+						img {
+						    position: relative;
+	    					top: -2px;
+							margin-right: .5rem;
+						}
+						&:hover {
+							color: red;
+						}
+					}
+				}
+			}
+		}
+	}
+	.reference__others {
+		.container {
+			& > h2 {
+				margin-bottom: min(max(4rem, 3vw), 6rem);
+			}
+		}
+	}
+}
+
+// sticky on vosoble menu on scroll top
+
+// .has-nav-down {
+// 	.reference .container .inner .inner__right .sticky {
+// 		top: 8rem;
+// 	}
+// }
+
+// Share
+
+.share-link-modal.fancybox-content {
+	width: 420px;
+	padding: rem(30);
+	background-color: $white;
+	border-radius: rem(10);
+}
+
+.share-link-icons {
+	margin: 0;
+	margin-top: rem(10);
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: inline-block;
+		margin: 0;
+		padding: 0;
+
+		a {
+			display: block;
+			padding: rem(10);
+			text-align: center;
+			color: $brown;
+			text-decoration: none;
+
+			i {
+				display: flex;
+			    align-items: center;
+			    justify-content: center;
+			    background-color: $red;
+			    color: $white;
+			    width: 40px;
+			    height: 40px;
+			    border-radius: 50%;
+			    transition: background-color .3s ease;
+			}
+
+			p {
+				font-size: rem(13);
+				margin-top: rem(10);
+				margin-bottom: 0;
+				white-space: nowrap;
+			}
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.share-link-copy {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	margin-top: 10px;
+	overflow: hidden;
+	border: 1px solid $grey;
+	border-radius: rem(50);
+	background-color: #F2F2F2;
+
+	input {
+		font-family: $font-family;
+		display: block;
+		background-color: #F2F2F2;
+		width: calc(100% - rem(40));
+	 	padding: rem(13) rem(25);
+        line-height: 1.2;
+		border: 0;
+		font-size: rem(15);
+		color: $black;
+		appearance: none;
+	}
+
+	button {
+		display: flex;
+	    align-items: center;
+	    justify-content: center;
+		width: 40px;
+		padding: rem(14) rem(20);
+		border: 0;
+		background-color: $red;
+		font-weight: 700;
+		text-align: center;
+		color: $white;
+		appearance: none;
+		transition: background-color .3s ease;
+
+		&:hover {
+			background-color: $green;
+		}
+	}
+}

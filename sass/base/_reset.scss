@@ -1,0 +1,101 @@
+/*==========================================================================*\
+  # Reset
+\*==========================================================================*/
+* {
+  &,
+  &:after,
+  &:before {
+    @include box-sizing(border-box);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+form,
+fieldset,
+label,
+legend,
+input,
+textarea,
+select,
+option,
+button,
+table,
+th,
+td,
+caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+abbr[title],
+dfn[title] {
+  cursor: help;
+}
+
+a,
+ins {
+  text-decoration: none;
+}
+
+a {
+  vertical-align: top;
+}
+
+ins {
+  border-bottom: 1px solid;
+}
+
+figure {
+  > a {
+    display: inline-block;
+  }
+
+  > img {
+    display: block;
+  }
+}
+
+img {
+  vertical-align: middle;
+  font-style: italic;
+}
+
+input,
+textarea,
+select,
+option,
+button {
+  outline: none;
+}
+
+fieldset,
+input,
+textarea,
+button {
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+label,
+button,
+select,
+option {
+  cursor: pointer;
+}

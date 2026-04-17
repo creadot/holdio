@@ -1,0 +1,255 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    line-height: $line-height;
+    letter-spacing: $letter-spacing;
+    text-align: left;
+    color: $color;
+    background-color: $white;
+    overflow-x: clip;
+    -webkit-font-smoothing: antialiased;
+    padding-top: min(max(1rem, 7vw), 14rem);
+    opacity: 0;
+    transition: opacity .2s ease;
+
+    // @include query-to(900) {
+    //     padding-top: 0;
+    // }
+
+    &.scrolling-disabled {
+        overflow-y: hidden;
+    }
+}
+
+.word-wrap,
+.char-wrap {
+    display: inline-block;
+    vertical-align: top;
+    //overflow: hidden;
+
+    .word {
+        will-change: transform;
+    }
+}
+
+i {
+    position: relative;
+    text-rendering: optimizeLegibility;
+}
+
+p {
+    
+    margin-bottom: min(max(2rem, 2vw), 2rem);
+    line-height: 1.66;
+}
+
+
+h1, .h1 {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    font-size: min(max(4rem, 4vw), 6rem);
+    line-height: $heading-line-height;
+    //color: $heading-color;
+    letter-spacing: $heading-letter-spacing;
+
+    @include query-to(600) {
+        line-height: 1;
+    }
+
+    .word-wrap {
+        padding: 0 2px 1rem;
+    }
+}
+
+h2, .h2 {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    font-size: min(max(3rem, 4vw), 4.6rem);
+    line-height: $heading-line-height;
+    //color: $heading-color;
+    letter-spacing: $heading-letter-spacing;
+    margin-bottom: min(max(2rem, 2vw), 4rem);
+
+    .word-wrap {
+        padding-bottom: 1rem;
+
+        @include query-to(600) {
+            padding-bottom: .4rem;
+        }
+    }
+
+    &.alt {
+        font-family: $font-family;
+        font-weight: $heading-font-weight;
+        font-size: min(max(3rem, 4vw), 4.6rem);
+        line-height: $heading-line-height;
+        //color: $heading-color;
+        letter-spacing: $heading-letter-spacing;
+    }
+}
+
+h3, .h3 {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    font-size: min(max(1.8rem, 1.5vw), 2.6rem);
+    line-height: $heading-line-height;
+    //color: $heading-color;
+    letter-spacing: $heading-letter-spacing;
+
+    .word-wrap, .char-wrap {
+        padding-bottom: .7rem;
+
+        @include query-to(600) {
+            padding-bottom: .2rem;
+        }
+    }
+    
+    &.alt {
+        font-family: $font-family;
+        font-weight: $heading-font-weight;
+        font-size: min(max(1.8rem, 4vw), 2.6rem);
+        line-height: $heading-line-height;
+        //color: $heading-color;
+        letter-spacing: $heading-letter-spacing;
+    }
+}
+
+main {
+    padding-top: 8rem;
+
+    &.main--padding {
+        padding-top: 15rem;
+    }
+}
+
+// .h2 {
+//     font-family: $font-silka;
+//     font-size: min(max(3.5rem, 4vw), 6rem);
+//     font-weight: 900; // black
+//     line-height: normal;
+//     //color: $red;
+//     //font-size: 3.4rem;
+// }
+
+// .h3 {
+//     font-family: $font-milligram;
+//     font-size: min(max(3.5rem, 2.5vw), 5rem);
+//     font-weight: 700; // bold
+//     line-height: normal;
+// }
+
+// .h4 {
+//     font-family: $font-milligram;
+//     font-size: min(max(3rem, 4vw), 3.8rem);
+//     font-weight: 700; // bold
+//     line-height: 1.28;
+// }
+
+// .h5 {
+//     font-family: $font-silka;
+//     font-size: min(max(2.5rem, 1.5vw), 3.2rem);
+//     font-weight: 700; // bold
+//     line-height: 1.28;
+// }
+
+
+i {
+    font-display: swap;
+}
+
+ul,
+ol,
+dl,
+table,
+blockquote,
+pre,
+figure {
+    margin-bottom: 0;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    margin-bottom: 0;
+}
+
+strong,
+b {
+    font-weight: 600;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+blockquote {
+    font-style: italic;
+
+    p {
+        margin: 0;
+    }
+}
+
+span {
+    display: inline-block;
+}
+
+a {
+    color: inherit; //$green;
+    text-decoration: none;
+    transition: color .3s ease;
+
+    &:hover,
+    &:focus {
+        color: $red;
+    }
+
+    // &:hover {
+    //     color: $green;
+    // }
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+.text-center {
+    text-align: center;
+}
+.text-center {
+    text-align: right;
+}
+
+.hidden {
+    display: none;
+}
+
+.fa {
+    position: relative;
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+    opacity: 0;
+    z-index: 13 !important;
+}
+
+
+.block--hero .container .inner .inner__left h1,
+.homepage .homepage__hero .text-wrapper .container .inner h1,
+.contact .contact__content .h2,
+.references .h2 {
+  visibility: hidden; /* Extra measure to ensure it's hidden */
+
+  .word-wrap {
+    opacity: 0;
+  }
+}

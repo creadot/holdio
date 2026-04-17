@@ -1,0 +1,29 @@
+/*==========================================================================*\
+  # 404
+\*==========================================================================*/
+
+.error-page {
+    //padding-top: 8rem;
+    height: 25vh;
+    min-height: 100px;
+    
+    .container {
+        // height: 100vh;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        // flex-direction: column;
+        // text-align: center;
+        // position: relative;
+        // min-height: 580px;
+        
+        a {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+

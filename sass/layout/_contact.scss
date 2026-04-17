@@ -1,0 +1,116 @@
+.contact {
+	//padding-top: 8rem;
+
+	.contact__content {
+		padding-bottom: 8rem;
+		overflow: hidden;
+
+		.h2 {
+			overflow: hidden;
+		}
+		
+		.container {
+			.inner {
+				display: flex;
+				gap: 3.5rem;
+				border-top: solid 1px $grey;
+				padding-top: 4rem;
+
+				@include query-to(700) {
+					flex-direction: column;
+					gap: 6rem;
+				}
+
+				.inner__left {
+					width: 50%;
+
+					@include query-to(700) {
+						width: 100%;
+					}
+					
+					.people {
+						margin-top: min(max(3rem, 2.5vw), 5rem);
+
+						.people__item {
+							display: flex;
+						    align-items: center;
+							color: $black;
+							gap: $gap;
+							margin-bottom: 1.3rem;
+
+							@include query-to(900) {
+								flex-direction: column;
+								align-items: flex-start;
+								gap: .5rem;
+							}
+
+							@include query-to(700) {
+								flex-direction: row;
+								align-items: center;
+								gap: $gap;
+							}
+
+							@include query-to(480) {
+								flex-direction: column;
+								align-items: flex-start;
+								gap: .5rem;
+							}
+
+							p {
+								margin-bottom: 0;
+								text-transform: uppercase;
+							}
+							a {
+								border: solid 1px #CFCFCF;
+								padding: .5rem 1.3rem;
+							}
+						}
+						& > :last-child {
+							margin-bottom: 0;
+						}
+					}
+				}
+				.inner__right {
+					width: 50%;
+
+					@include query-to(700) {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.contact__cta {
+		position: relative;
+	    padding: min(max(6rem, 8vw), 17rem) 0;
+
+	    & > img {
+	    	position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    object-fit: cover;
+	    }
+
+	    .container {
+	    	.inner {
+	    		max-width: min(max(30rem, 45vw), 45rem);
+	    		width: 100%;
+	    		min-height: min(max(30rem, 54vw), 54rem);
+	    		background-color: $white;
+	    		position: relative;
+	    		z-index: 1;
+	    		padding: 6rem 5rem;
+    		    display: flex;
+    			flex-direction: column;
+    			justify-content: flex-end;
+
+    			img {
+				    margin: 0 auto 8rem;
+    				display: block;
+    			}
+	    	}
+	    }
+	}
+}

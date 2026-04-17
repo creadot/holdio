@@ -1,0 +1,145 @@
+/*==========================================================================*\
+  # HOMEPAGE
+\*==========================================================================*/
+
+body.home {
+    // .scrollmagic-pin-spacer {
+    //     min-height: 1000px !important;
+    // }
+}
+
+.homepage {
+
+    .homepage__hero {
+        position: relative;
+
+        .video-wrapper {
+            overflow: hidden;
+            margin: 0 0 min(max(6rem, 6vw), 12rem);
+            // will-change: height;
+            //will-change: height, margin;
+
+            video, img {
+                width: 100%;
+                height: min(max(28rem, 50vw), 100rem);
+                object-fit: cover;
+            }
+        }
+
+        .text-wrapper {
+            overflow: hidden;
+            background: $white;
+            position: relative;
+            padding-bottom: min(max(6rem, 6vw), 12rem);
+
+            .container {
+                .inner {
+                    display: inline;
+                    
+                    h1 {
+                        display: inline;
+                        
+                        img {
+                            vertical-align: unset;
+                            pointer-events: none;
+                            max-width: min(max(12rem, 12vw), 19rem);
+                        }
+
+                        .site-name {
+                            //visibility: hidden;
+                            cursor: pointer;
+                            font-weight: 500;
+                            color: $red;
+
+                            @include query-to(900) {
+                                cursor: pointer;
+                            }
+
+                            sup {
+                                font-size: min(max(4rem, 4vw), 6.6rem);
+                                top: 0;
+                                line-height: 1;
+                                left: -1.3rem;
+                            }
+                        }
+                    }
+                    
+                    .companies {
+                        color: $red;
+                        //padding-left: 1.5rem;
+                        display: inline;
+
+                        @include query-to(900) {
+                            display: none;
+                        }
+                        
+                        .companies__items {
+                            display: inline;
+                            z-index: 1;
+                            //background-color: $white;
+                            position: relative;
+                            transition: visibility 0.3s, opacity 0.3s;
+                            opacity: 1;
+                            
+                            // &.hovered {
+                            //     opacity: 1;
+                            // }
+                            
+                            // &:first-child {
+                            //     margin-left: calc(-1 * min(max(12rem, 12vw), 19rem) - 2.5rem);
+                            // }
+
+                            .company {
+                                position: relative;
+                                font-weight: 500;
+                                //padding-left: 4rem;
+                                position: relative;
+
+                                .word {
+                                    &:first-child {
+                                        vertical-align: middle;
+                                    }
+                                
+                            
+                                    .letter {
+                                        opacity: 0;
+                                        transition: opacity .3s ease;
+
+                                        // &:first-child {
+                                        //     &:before {
+                                        //         content: "*";
+                                        //         position: absolute;
+                                        //         top: 15%;
+                                        //         left: 0px;
+                                        //     }
+                                        // }
+                                    }
+                                }
+                            }
+
+                            
+                            
+                            span {
+                                
+                                
+                                // &:first-child {
+                                //     padding-left: 0;
+                                    
+                                //     &:before {
+                                //         content: "";
+                                //     }
+                                // }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+    .homepage__video-slider {
+        margin: 14rem 0;
+    }
+
+}

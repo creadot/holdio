@@ -1,0 +1,30 @@
+.references {
+	//padding-top: 8rem;
+
+	.h2 {
+		overflow: hidden;
+	}
+
+	.container {
+		.categories {
+			display: flex;
+			flex-wrap: wrap;
+			gap: .7rem;
+			margin-bottom: 5rem;
+
+			a {
+				text-transform: uppercase;
+				padding: .5rem 1rem;
+				border: solid 1px $grey;
+				@include transition();
+
+				&:hover,
+				&.active {
+					color: $white;
+					background-color: $red;
+				}
+			}
+		}
+		
+	}
+}

@@ -1,0 +1,226 @@
+.references-list {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: min(max(2rem, 3vw), 6rem);
+	column-gap: $gap;
+
+	.references-list__item {
+		width: calc(33.3333333% - 1.7rem);
+
+		@include query-to(1040) {
+			width: calc(50% - 1.3rem);
+		}
+		@include query-to(540) {
+			width: 100%;
+		}
+
+		.content {
+			border: solid 1px $grey;
+			display: flex;
+			flex-direction: column;
+    		justify-content: space-between;
+			height: 100%;
+			padding: 4.4rem min(max(2rem, 2vw), 4rem) 3rem 2rem;
+
+			.label {
+				color: $grey-dark;
+				display: block;
+				text-transform: uppercase;
+				margin-bottom: 3rem;
+			}
+			.h3 {}
+			img {
+				margin-top: 3rem;
+			}
+			.date {
+				color: $grey-dark;
+				display: block;
+				text-align: right;
+				margin-top: 7rem;
+				text-transform: uppercase;
+			}
+		}
+
+		.image {
+			position: relative;
+			overflow: hidden;
+			height: 100%;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				@include transition();
+    			@include transition-property((transform));
+			}
+
+			.play-icon {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 70px;
+				height: 70px;
+				background-color: $white;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				i {
+					font-size: 2rem;
+					color: $black;
+					position: relative;
+					left: 2px;
+					@include transition();
+        			//@include transition-property((background-color, backdrop-filter, transform, opacity));
+				}
+			}
+
+			&:hover {
+				i {
+					color: $red;
+				}
+			}
+
+		}
+
+		&.references-list__item--big {
+			width: 100%;
+			display: flex;
+
+			@include query-to(1040) {
+				order: -1;
+			}
+			@include query-to(540) {
+				flex-direction: column-reverse;
+				order: inherit;
+			}
+
+			.content {
+				width: calc(33.3333333% - 1.7rem);
+
+				@include query-to(1040) {
+					width: 50%;
+				}
+				@include query-to(540) {
+					width: 100%;
+				}
+			}
+			.image {
+				width: 68%;
+
+				@include query-to(1040) {
+					width: 50%;
+				}
+				@include query-to(540) {
+					width: 100%;
+					aspect-ratio: 16 / 9;
+				}
+			}
+
+		}
+		&.references-list__item--half {
+			width: calc(66.6666666% - .85rem);
+			display: flex;
+
+			@include query-to(1040) {
+				width: 100%;
+				order: -1;
+			}
+			@include query-to(540) {
+				flex-direction: column-reverse;
+				order: inherit;
+			}
+
+			.content {
+				width: 50%;
+
+				@include query-to(540) {
+					width: 100%;
+				}
+			}
+			.image {
+				width: 50%;
+
+				@include query-to(540) {
+					width: 100%;
+					aspect-ratio: 16 / 9;
+				}
+			}
+		}
+
+		&:hover {
+			.image {
+				img {
+					transform: scale(1.05);
+				}
+			}
+		}
+	}
+}
+
+// Pagination
+.pagination {
+	margin-top: 15rem;
+	border-top: solid 1px $grey;
+	border-bottom: solid 1px $grey;
+	padding: 3.4rem 0;
+	display: flex;
+    align-items: center;
+
+	.page-numbers {
+		font-family: $heading-font-family;
+	    font-weight: $heading-font-weight-regular;
+	    font-size: min(max(1.8rem, 4vw), 2.6rem);
+	    line-height: $heading-line-height;
+	    letter-spacing: $heading-letter-spacing;
+	    margin: 0 min(max(.1rem, 1.5vw), 3rem);
+	    padding: 1rem .7rem;
+
+	    &.current {
+	    	color: $red;
+	    	border-bottom: solid 1px $red;
+	    }
+	}
+
+	.prev,
+	.next {
+		display: inline-block;
+		width: min(max(4rem, 3.25vw), 6.5rem);
+		height: min(max(4rem, 3.25vw), 6.5rem);
+		transition: .3s;
+		position: relative;
+
+		.circle {
+			display: inline-block;
+			width: min(max(4rem, 3.25vw), 6.5rem);
+			height: min(max(4rem, 3.25vw), 6.5rem);
+			border-radius: 50%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border: solid 1px $red;
+			font-size: 20px;
+			font-weight: 700;
+			text-transform: uppercase;
+			z-index: 2;
+		}
+		i {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			display: block;
+			z-index: 10;
+			text-align: center;
+			font-size: 1.3rem;
+			color: $red;
+			//font-weight: 700;
+			text-transform: uppercase;
+		}
+	}
+}

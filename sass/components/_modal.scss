@@ -1,0 +1,108 @@
+.modal {
+	display: none;
+}
+
+.modal.fancybox-content {
+    //height: auto;
+    background: transparent;
+    padding: 8rem 0 4rem;
+
+    .inner {
+    	max-width: 650px;
+    	width: 100%;
+    	background-color: $white;
+
+    	@include query-to(1440) {
+	        padding: rem(60) rem(40);
+	    }
+	    @include query-to(960) {
+	        padding: rem(40) rem(20);
+	    }
+
+	    .image {}
+	    .content {
+	    	padding: 5rem 3rem;
+
+	    	.h2 {
+	    		margin-bottom: 3rem;
+	    	}
+
+	    	.accordion:first-of-type {
+	    		margin-top: 6rem;
+	    	}
+
+	    	.accordion {
+	    		.accordion__content {
+	    			padding-top: 1rem;
+
+	    			.people {
+						.people__item {
+							display: flex;
+						    align-items: center;
+							gap: $gap;
+							margin-bottom: 1.3rem;
+
+							p {
+								font-size: 1.5rem;
+								margin-bottom: 0;
+								text-transform: uppercase;
+							}
+							a {
+								color: $black;
+								border: solid 1px #CFCFCF;
+								padding: .5rem 1.3rem;
+							}
+						}
+						& > :last-child {
+							margin-bottom: 0;
+						}
+					}
+	    		}
+	    	}
+	    }
+    }
+
+    .fancybox-close-small {
+    	cursor: pointer;
+    	left: 50%;
+    	transform: translate(-50%, 0);
+    	opacity: 1;
+        display: flex;
+    	align-items: center;
+    	justify-content: center;
+        background: $white;
+        color: $red;
+        top: 2rem;
+        padding: rem(5) rem(15);
+        border: solid 1px $red;
+        border-radius: rem(50);
+        transition: background-color .3s ease;
+
+        svg {
+        	width: 20px;
+        }
+
+        &:hover {
+            background-color: $white;
+        }
+
+        // &:hover {
+        //     cursor: pointer;
+        // }
+    }
+
+}
+
+.fancybox-slide {
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.fancybox-slide--current {
+  overflow: auto !important;
+}
+
+/* Zakažte Lenis efekty na Fancybox */
+.fancybox-is-open [data-lenis-prevent] {
+  overscroll-behavior: auto;
+}

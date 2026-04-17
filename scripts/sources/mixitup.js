@@ -1,0 +1,4 @@
+$(function(){
+    $('#mixitup-services').mixItUp();
+});
+

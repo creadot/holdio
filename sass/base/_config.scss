@@ -1,0 +1,50 @@
+/*==========================================================================*\
+  # Config
+\*==========================================================================*/
+
+$white: #ffffff;
+$black: #000;
+$red: #B4272D;
+$brown: #826B71;
+$green: #6db39a;
+$grey: #E2E2E2;
+$grey-dark: #909090;
+
+////////////////////////
+
+// text
+$color: $brown;
+$font-family: "ibm-plex-sans", sans-serif;
+$font-weight: 400;
+$font-weight-bold: 700;
+$font-size: 1.6rem;
+$font-size-alt: 2rem;
+$font-size-small: 1.3rem;
+$line-height: 1.5;
+$line-height-alt: 1.15;
+$letter-spacing: -0.16px;
+
+//heading
+$heading-font-family: "ivyora-text", sans-serif;
+$heading-font-weight: 300;
+$heading-font-weight-regular: 400;
+$heading-font-weight-bold: 900;
+$heading-line-height: 1.16;
+$heading-letter-spacing: -0.46px;
+
+// buttons
+$btn-height: 4rem;
+$btn-small-height: 10rem;
+
+// menu
+$logo-height: 3rem;
+$menu-height: 8rem;
+$menu-gap: 3rem;
+
+// section
+$section-padding: 8rem;
+
+// flex
+$gap: 2.5rem;
+$gap-large: 2 * $section-padding; // 16rem
+$gap-small: $section-padding; // 8rem

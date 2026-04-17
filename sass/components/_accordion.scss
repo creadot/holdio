@@ -1,0 +1,62 @@
+.accordion {
+	border-top: solid 1px $grey;
+
+    &:first-child {
+        border: none;
+    }
+
+    .accordion__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $black;
+        font-family: $font-family;
+        font-weight: $heading-font-weight;
+        font-size: 1.6rem;
+        line-height: $heading-line-height;
+        letter-spacing: $heading-letter-spacing;
+        cursor: pointer;
+        padding: 1rem 0;
+        width: 100%;
+        border: none;
+        position: relative;
+        @include transition();
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            right: min(max(2rem, 2vw), 3.5rem);
+            transform: translate(0, -50%);
+            font-family: "Font Awesome 5 Pro";
+            font-size: 3rem;
+            display: inline-block;
+            content: "\2b";
+        }
+        &:hover {
+        	color: $red;
+        }
+    }
+
+    .accordion__content {
+        display: none;
+        background-color: transparent;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+		width: 100%;
+
+        & > :last-child {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &.active {
+        .accordion__title {
+            &:after {
+                //font-family: "Font Awesome 5 Pro";
+                content: "\f068";
+                font-weight: bold;
+                font-size: 2rem;
+            }
+        }
+    }
+}

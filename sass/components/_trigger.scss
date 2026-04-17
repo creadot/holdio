@@ -1,0 +1,53 @@
+// GSAP
+.trigger {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+
+#homepage-hero-video {
+    top: -25vh;
+}
+
+#homepage-services-list {
+    top: -20vh;
+
+    @include query-to(900) {
+        top: 0vh;
+    }
+    @include query-to(500) {
+        top: 50vh;
+    }
+}
+
+#perex {
+    top: calc(-1 * min(max(20vh, 15vw), 30vh));
+}
+
+#footer-text-animation {
+    top: -50vh;
+
+    // @include query-to(900) {
+    //     top: -80vh;
+    // }
+}
+
+#bubbles-trigger {
+    top: 0;
+}
+
+// Split
+.trigger--1-05-relative {
+    position: relative;
+    top: -105vh;
+}
+
+.trigger--1-05 {
+    position: absolute;
+    top: -105vh;
+}
+
+
+#service-hero {
+    top: -25vh;
+}
