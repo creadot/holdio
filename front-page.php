@@ -88,7 +88,7 @@ $references_terms = get_terms([
 					<p><?php echo get_field("service_description", $homepage_id); ?></p>
 				</div>
 				<?php if (!empty($all_terms) && !is_wp_error($all_terms)) : ?>
-					<div id="homepage-service-categories" class="categories">
+					<div id="<?php pll_e("sluzby"); ?>" class="categories">
 						<span class="categories__item filter" data-filter="all"><?php pll_e("Všechny"); ?></span>
 						<?php foreach ($all_terms as $term) : ?>
 							<span class="categories__item filter" data-filter=".<?php echo esc_attr($term->slug); ?>">
